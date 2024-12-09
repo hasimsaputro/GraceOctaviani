@@ -9,22 +9,36 @@ body {
     padding: 20px 15px;
 }
 #content {
-    float: left;
-    width: 75%;
-    overflow: auto;
+    flex: 6;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 aside {
-    float: right;
-    width: 25%;
-    overflow: auto;
-    padding-left: 20px;
+    flex: 2;
 }
-@media screen and (max-width: 1000px) {
-    #content, aside {
-        width: 100%;
-        padding: 0;
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    
+    main aside {
+    align-self: center;
     }
 }
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+    main aside {
+    align-self: stretch;
+    }
+}
+
 .main-header {
     border-radius: 10px;
     text-align: center;
@@ -45,12 +59,13 @@ nav {
 }
 nav ul {
     display: flex;
+    justify-content: center; /* Menyusun item secara horizontal di tengah */
+    align-items: center; /* Menyusun item secara vertikal di tengah */
     padding: 0;
-    margin: 0;
+    gap: 2rem;
 }
 nav li {
     list-style: none;
-    display: inline;
     border-radius: 5px;
 }
 nav a {
@@ -76,7 +91,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    overflow: auto;
+    display: flex;
 }
 section {
     background-color: #ffffff;
