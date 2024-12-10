@@ -25,7 +25,11 @@ aside {
     }
     
     main aside {
-    align-self: center;
+        align-self: center;
+    }
+
+    .daftar-member table{
+        font-size: smaller;
     }
 }
 
@@ -35,7 +39,7 @@ aside {
         justify-content: center;
     }
     main aside {
-    align-self: stretch;
+        align-self: stretch;
     }
 }
 
@@ -151,6 +155,18 @@ article {
     text-indent: 2em;
     text-align: justify;
 }
+
+.daftar-member{
+    width: 100%; /* Menyesuaikan lebar pembungkus dengan lebar kontainer */
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch; /* Menambahkan scroll halus di perangkat mobile */
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
 h1 {
     color: #ff3180;
     text-shadow: #fff 1px 1px 0;
