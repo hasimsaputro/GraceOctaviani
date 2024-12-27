@@ -162,9 +162,21 @@ article {
     -webkit-overflow-scrolling: touch; /* Menambahkan scroll halus di perangkat mobile */
 }
 
-table{
+
+table {
     width: 100%;
-    table-layout: fixed;
+    table-layout: fixed; /* Memastikan lebar kolom konsisten */
+    border-collapse: collapse; /* Menggabungkan garis border */
+}
+
+th, td {
+    border: 1px solid black; /* Menambahkan garis border pada setiap cell */
+    padding: 8px; /* Menambahkan padding pada cell */
+    text-align: left; /* Menyusun teks ke kiri (opsional) */
+}
+
+th {
+    background-color: #f2f2f2; /* Memberikan latar belakang abu-abu muda pada header */
 }
 
 h1 {
